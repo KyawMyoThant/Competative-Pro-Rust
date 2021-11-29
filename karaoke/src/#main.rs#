@@ -1,0 +1,9 @@
+use std::io;
+fn main() {
+    let mut no_of_mAs = String::new();
+    io::stdin().read_line(&mut no_of_mA).expect("Failed to read");
+    
+    
+
+
+}

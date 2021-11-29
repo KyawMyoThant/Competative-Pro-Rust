@@ -1,0 +1,18 @@
+use std::io;
+fn main() {
+    //open a reader 
+    let mut lucky_pin = String::new();
+    io::stdin()
+    .read_line(&mut lucky_pin)
+    .expect("read line error");
+    static mut RES : u32 = 0;
+    let no_lucky = lucky_pin.trim().parse().expect("failed to parse");
+    for a in 1..no_lucky-1 {
+	for b in a+1..no_lucky{
+	    for c in a+2..no_lucky+1{
+		unsafe{RES+=1;}
+	    }
+	} 
+    }
+    unsafe{println!("{}" , RES);}
+}

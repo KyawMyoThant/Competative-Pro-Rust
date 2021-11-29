@@ -14,5 +14,5 @@ fn main() {
 	}
     }
     let v = new_st.split_whitespace();
-    println!("{}" , v.max().unwrap());
+    println!("{}" , v.max().unwrap().len());
 }
